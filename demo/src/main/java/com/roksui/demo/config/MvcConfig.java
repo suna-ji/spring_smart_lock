@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 
-  // ø‰√ª - ∫‰ ø¨∞·
+  // ø‰√ª - ∫‰ ø¨∞· config file
   public void addViewControllers(ViewControllerRegistry registry) {
     registry.addViewController("/").setViewName("main");
     registry.addViewController("/login").setViewName("login");
