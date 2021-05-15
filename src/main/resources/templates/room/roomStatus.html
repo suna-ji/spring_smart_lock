@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple_member</title>
+</head>
+<body>
+<h1>Room Hello</h1>
+<table>
+    <tbody>
+    <tr th:each="room : ${roomList}">
+        <td>
+            <span th:text="${room.roomNum}"></span>
+        </td>
+        <td>
+            <span th:text="${room.roomIs}"></span>
+        </td>
+        <td>
+            <span th:text="${room.roomReserve}"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

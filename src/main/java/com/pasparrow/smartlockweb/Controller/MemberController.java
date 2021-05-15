@@ -27,7 +27,6 @@ public class MemberController {
     @PostMapping("/member/signup")
     public String signup(MemberDto memberDto){
         memberService.signUp(memberDto);
-
         return "redirect:/";
     }
 
@@ -35,5 +34,4 @@ public class MemberController {
     public String login() {
         return "/member/loginForm";
     }
-
 }
