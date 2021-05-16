@@ -16,8 +16,7 @@ public class RoomService {
     private RoomRepository roomRepository;
 
     @Transactional
-    public Integer reserveRoom(RoomDto roomDto){
-        System.out.println(roomDto.getRoomNum());
+    public String reserveRoom(RoomDto roomDto){
         return roomRepository.save(roomDto.toEntity()).getRoomNum();
     }
 

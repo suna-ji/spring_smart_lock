@@ -5,23 +5,27 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
+@Table(name = "room")
 public class Room {
 
     @Id
     @GeneratedValue
-    private int roomNum;
+    private Integer roomId;
+    private String roomNum;
     private boolean roomIs;
     private String roomReserve;
+    @ManyToOne
+    @JoinColumn(name = "member_id")
+    private Member member;
 
     @Builder
-    public Room(int roomNum, boolean roomIs, String roomReserve){
+    public Room(Integer roomId, String roomNum, boolean roomIs, String roomReserve){
+        this.roomId = roomId;
         this.roomNum = roomNum;
         this.roomIs = roomIs;
         this.roomReserve = roomReserve;

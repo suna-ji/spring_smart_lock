@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface RoomRepository extends JpaRepository<Room, Integer> {
-    Optional<Room> findByRoomNum(Integer roomNum);
+public interface RoomRepository extends JpaRepository<Room, Long> {
+    Optional<Room> findByRoomNum(Long roomNum);
 }
