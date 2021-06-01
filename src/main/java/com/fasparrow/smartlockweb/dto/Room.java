@@ -1,8 +1,10 @@
-package com.pasparrow.smartlockweb.dto;
+package com.fasparrow.smartlockweb.dto;
 
-public class RoomDto {
+import javax.validation.constraints.NotNull;
+import java.util.List;
+
+public class Room {
     public static class Info {
-
         private long roomId;
         private String roomName;
         private String price;
@@ -11,7 +13,7 @@ public class RoomDto {
             return roomId;
         }
 
-        public void setRoomId(Integer roomId) {
+        public void setRoomId(long roomId) {
             this.roomId = roomId;
         }
 
@@ -61,24 +63,24 @@ public class RoomDto {
     }
 
     public static class Response {
-        private final List<RoomDto.Info> rooms;
+        private final List<Room.Info> rooms;
 
         public static class Builder {
-            private List<RoomDto.Info> rooms;
+            private List<Room.Info> rooms;
 
-            public RoomDto.Response.Builder rooms(List<RoomDto.Info> value) {
+            public Builder rooms(List<Room.Info> value) {
                 rooms = value;
                 return this;
             }
 
-            public RoomDto.Response build() { return new RoomDto.Response(this); }
+            public Response build() { return new Response(this); }
         }
 
-        private Response(CustomerDto.Response.Builder builder) {
+        private Response(Builder builder) {
             rooms = builder.rooms;
         }
 
-        public List<RoomDto.Info> getCustomers() {
+        public List<Room.Info> getCustomers() {
             return rooms;
         }
     }

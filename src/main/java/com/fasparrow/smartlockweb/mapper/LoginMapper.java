@@ -1,6 +1,6 @@
-package com.pasparrow.smartlockweb.mapper;
+package com.fasparrow.smartlockweb.mapper;
 
-import com.pasparrow.smartlockweb.dto.RoomDto;
+import com.fasparrow.smartlockweb.dto.Room;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -12,5 +12,5 @@ import java.util.List;
  */
 @Mapper
 public interface LoginMapper {
-    List<RoomDto> selectUserList();
+    List<Room> selectUserList();
 }

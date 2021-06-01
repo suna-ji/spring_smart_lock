@@ -1,4 +1,4 @@
-package com.pasparrow.smartlockweb.dto;
+package com.fasparrow.smartlockweb.dto;
 
 /**
  * 로그인 정보

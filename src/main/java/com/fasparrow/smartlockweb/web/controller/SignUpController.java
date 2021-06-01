@@ -1,4 +1,4 @@
-package com.pasparrow.smartlockweb.web.controller;
+package com.fasparrow.smartlockweb.web.controller;
 
 /**
  * 회원가입 컨트롤러

@@ -1,4 +1,8 @@
-package com.pasparrow.smartlockweb.dto;
+package com.fasparrow.smartlockweb.dto;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import java.util.List;
 
 /**
  * 사용자 정보
@@ -6,7 +10,7 @@ package com.pasparrow.smartlockweb.dto;
  * @author ji
  */
 
-public class CustomerDto {
+public class Member {
     public static class Info {
         private String userPK;
         private String userId;
@@ -17,6 +21,10 @@ public class CustomerDto {
 
         public String getUserPK() {
             return userPK;
+        }
+
+        public void setUserPK(String userPK) {
+            this.userPK = userPK;
         }
 
         public String getUserId() {
@@ -58,8 +66,6 @@ public class CustomerDto {
         public void setPhoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
         }
-
-
     }
 
     public static class Request {
@@ -124,25 +130,25 @@ public class CustomerDto {
 
 
     public static class Response {
-        private final List<CustomerDto.Info> customer;
+        private final List<Member.Info> members;
 
         public static class Builder {
-            private List<CustomerDto.Info> customers;
+            private List<Member.Info> members;
 
-            public CustomerDto.Response.Builder customers(List<CustomerDto.Info> value) {
-                customers = value;
+            public Builder customers(List<Member.Info> value) {
+                members = value;
                 return this;
             }
 
-            public CustomerDto.Response build() { return new CustomerDto.Response(this); }
+            public Response build() { return new Response(this); }
         }
 
-        private Response(CustomerDto.Response.Builder builder) {
-            customers = builder.customers;
+        private Response(Builder builder) {
+            members = builder.members;
         }
 
-        public List<CustomerDto.Info> getCustomers() {
-            return customers;
+        public List<Member.Info> getCustomers() {
+            return members;
         }
     }
 

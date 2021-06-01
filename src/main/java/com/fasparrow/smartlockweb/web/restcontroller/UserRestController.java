@@ -1,6 +1,6 @@
-package com.pasparrow.smartlockweb.web.restcontroller;
+package com.fasparrow.smartlockweb.web.restcontroller;
 
-import com.pasparrow.smartlockweb.service.UserService;
+import com.fasparrow.smartlockweb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
