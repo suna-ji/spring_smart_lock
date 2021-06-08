@@ -5,16 +5,16 @@ import java.util.List;
 
 public class Room {
     public static class Info {
-        private long roomId;
+        private long roomPk;
         private String roomName;
         private String price;
 
-        public long getRoomId() {
-            return roomId;
+        public long getRoomPk() {
+            return roomPk;
         }
 
-        public void setRoomId(long roomId) {
-            this.roomId = roomId;
+        public void setRoomPk(long roomPk) {
+            this.roomPk = roomPk;
         }
 
         public String getRoomName() {

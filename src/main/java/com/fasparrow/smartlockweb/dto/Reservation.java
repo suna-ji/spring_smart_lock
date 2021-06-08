@@ -7,9 +7,9 @@ import java.util.Date;
 
 public class Reservation {
     public static class Info {
-        private String reservationPK;
-        private long memberId;
-        private long roomId;
+        private long reservationPK;
+        private long memberPK;
+        private long roomPK;
         private String roomPassword;
         private boolean isCancel;
         private Date startTime;
@@ -17,28 +17,28 @@ public class Reservation {
         private Date createDate;
         private Date modifyDate;
 
-        public String getReservationPK() {
+        public long getReservationPK() {
             return reservationPK;
         }
 
-        public void setReservationPK(String reservationPK) {
+        public void setReservationPK(long reservationPK) {
             this.reservationPK = reservationPK;
         }
 
-        public long getMemberId() {
-            return memberId;
+        public long getMemberPK() {
+            return memberPK;
         }
 
-        public void setMemberId(long memberId) {
-            this.memberId = memberId;
+        public void setMemberPK(long memberPK) {
+            this.memberPK = memberPK;
         }
 
-        public long getRoomId() {
-            return roomId;
+        public long getRoomPK() {
+            return roomPK;
         }
 
-        public void setRoomId(long roomId) {
-            this.roomId = roomId;
+        public void setRoomPK(long roomPK) {
+            this.roomPK = roomPK;
         }
 
         public String getRoomPassword() {

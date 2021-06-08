@@ -12,27 +12,27 @@ import java.util.List;
 
 public class Member {
     public static class Info {
-        private String userPK;
-        private String userId;
+        private long memberPK;
+        private String memberId;
         private String password;
-        private String userName;
+        private String memberName;
         private String email;
         private String phoneNumber;
 
-        public String getUserPK() {
-            return userPK;
+        public long getMemberPK() {
+            return memberPK;
         }
 
-        public void setUserPK(String userPK) {
-            this.userPK = userPK;
+        public void setMemberPK(long memberPK) {
+            this.memberPK = memberPK;
         }
 
-        public String getUserId() {
-            return userId;
+        public String getMemberId() {
+            return memberId;
         }
 
-        public void setUserId(String userId) {
-            this.userId = userId;
+        public void setMemberId(String memberId) {
+            this.memberId = memberId;
         }
 
         public String getPassword() {
@@ -43,12 +43,12 @@ public class Member {
             this.password = password;
         }
 
-        public String getUserName() {
-            return userName;
+        public String getMemberName() {
+            return memberName;
         }
 
-        public void setUserName(String userName) {
-            this.userName = userName;
+        public void setMemberName(String memberName) {
+            this.memberName = memberName;
         }
 
         public String getEmail() {
@@ -66,18 +66,19 @@ public class Member {
         public void setPhoneNumber(String phoneNumber) {
             this.phoneNumber = phoneNumber;
         }
+
     }
 
     public static class Request {
 
         @NotNull
-        private String userId;
+        private String memberId;
 
         @NotNull
         private String password;
 
         @NotNull
-        private String userName;
+        private String memberName;
 
         @NotNull
         @Pattern(regexp = "\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b")
@@ -87,12 +88,12 @@ public class Member {
         @Pattern(regexp = "(01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})|[0-9]{2,3}-[0-9]{3,4}-[0-9]{4})")
         private String phoneNumber;
 
-        public String getUserId() {
-            return userId;
+        public String getMemberId() {
+            return memberId;
         }
 
-        public void setUserId(String userId) {
-            this.userId = userId;
+        public void setMemberId(String memberId) {
+            this.memberId = memberId;
         }
 
         public String getPassword() {
@@ -103,12 +104,12 @@ public class Member {
             this.password = password;
         }
 
-        public String getUserName() {
-            return userName;
+        public String getMemberName() {
+            return memberName;
         }
 
-        public void setUserName(String userName) {
-            this.userName = userName;
+        public void setMemberName(String memberName) {
+            this.memberName = memberName;
         }
 
         public String getEmail() {
