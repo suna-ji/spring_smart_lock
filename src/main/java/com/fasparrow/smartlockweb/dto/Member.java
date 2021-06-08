@@ -79,8 +79,8 @@ public class Member {
         @NotNull
         private String userName;
 
-        //정규식 추가
         @NotNull
+        @Pattern(regexp = "\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b")
         private String email;
 
         @NotNull
@@ -127,7 +127,6 @@ public class Member {
             this.phoneNumber = phoneNumber;
         }
     }
-
 
     public static class Response {
         private final List<Member.Info> members;
